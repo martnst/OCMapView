@@ -48,6 +48,7 @@
     _clusterByGroupTag = NO;
     _clusterInvisibleViews = NO;
     _neeedsClustering = YES;
+    _mapzoomedSensibility = 0.1f;
     
     // define relevant properties (those, which will affect the clustering)
     self.reclusterOnChangeProperties = @[@"annotationsToIgnore",
@@ -217,7 +218,7 @@
 
 - (BOOL)mapWasZoomed;
 {
-    return (fabs(self.lastRefreshedMapRect.size.width - self.visibleMapRect.size.width) > 0.1f);
+    return (fabs(self.lastRefreshedMapRect.size.width - self.visibleMapRect.size.width) > _mapzoomedSensibility);
 }
 
 - (BOOL)mapWasPannedSignificantly;

@@ -72,8 +72,14 @@ default: 0.2*/
 
 //
 /// Clusters all annotations, even if they are outside of the visible MKCoordinateRegion
-/* default: NO (checks for boundaries)*/
+/** default: NO (checks for boundaries)*/
 @property (nonatomic, assign) BOOL clusterInvisibleViews;
+
+//
+/// Defined the sensibilty by which map zooming gets recognized in order to call ref doClustering.
+/** default: 0.1f */
+@property (nonatomic, assign) float mapzoomedSensibility;
+
 
 /// Start the clustering of annotations.
 /**
