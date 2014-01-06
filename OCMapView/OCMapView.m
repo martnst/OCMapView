@@ -218,7 +218,7 @@
 
 - (BOOL)mapWasZoomed;
 {
-    return (fabs(self.lastRefreshedMapRect.size.width - self.visibleMapRect.size.width) > _mapzoomedSensibility);
+    return ((fabs(self.lastRefreshedMapRect.size.width - self.visibleMapRect.size.width) / self.lastRefreshedMapRect.size.width) > _mapzoomedSensibility);
 }
 
 - (BOOL)mapWasPannedSignificantly;
