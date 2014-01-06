@@ -75,9 +75,11 @@ default: 0.2*/
 /** default: NO (checks for boundaries)*/
 @property (nonatomic, assign) BOOL clusterInvisibleViews;
 
-//
-/// Defined the sensibilty by which map zooming gets recognized in order to call ref doClustering.
-/** default: 0.1f */
+/** 
+ Defined the sensibilty by which map zooming gets recognized in order to rebuild the clustering.
+ The value must be above zero, while an heigher value means less sensibility.
+ default: 0.1f 
+ */
 @property (nonatomic, assign) float mapzoomedSensibility;
 
 
